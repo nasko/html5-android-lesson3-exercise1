@@ -37,12 +37,11 @@ var app = {
         app.receivedEvent('deviceready');
     },
     onBackButton: function() {
-        //app.receivedEvent('backbutton');
-		app.backButtonInvokedCnt++;
+        app.backButtonInvokedCnt++;
 
-		if(2 == app.backButtonInvokedCnt){
-			navigator.app.exitApp();
-		}
+        if(2 == app.backButtonInvokedCnt){
+            navigator.app.exitApp();
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -55,7 +54,7 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-	backButtonInvokedCnt: 0
+    backButtonInvokedCnt: 0
 };
 
 app.initialize();
